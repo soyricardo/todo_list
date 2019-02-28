@@ -1,0 +1,32 @@
+.fecha {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.project-info {
+    border: 2px dotted grey; 
+    margin-bottom: 1rem;
+    padding: 1rem;
+    
+}
+
+.name{
+    font-size: 1.6rem;
+}
+.project-info .project-title{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2rem;
+      
+}
+
+.rest {
+    
+    border-left: 4px solid yellowgreen;
+    padding-left: 0.7rem;
+    margin-top: .9rem;
+}

@@ -1,0 +1,36 @@
+<!--
+<header>
+  <input type="text" placeholder="añadir tarea" 
+  (keyup)="handleKeyup($event)"> -->
+  <!-- con ngModel -->
+  
+  <header >
+  <h1 class="jumbotron creacion_componente" [@flyInOut]>Lista de Tareas - GeeksHubs Bootcamp</h1>
+  
+  <input class="col-8" type="text" 
+  [class.wrongTarea]="newTareaText.trim() === '' && newTareaText !== ''" 
+  placeholder="Añada las tareas!"  
+  [(ngModel)]= "newTareaText"
+  (keyup)="handleKeyup($event)"
+  > 
+
+  <input class="col-4" type="submit" 
+  (click)="btnAdd($event)" 
+  value="Submit">
+  
+  </header>
+  <!-- <input
+    type="text"
+    placeholder="añadir tarea"
+    [(ngModel)]="newTareaText"
+    (keyup)="handleKeyup($event)"
+    [class.wrongTarea]="newTareaText.trim() === '' && newTareaText !== ''"
+  /> -->
+
+<!-- <header>
+    <h1>To-Do - 2 Componentes</h1>
+    <input  
+    type="text" placeholder="añadir tarea"  [(ngModel)]= "newTareaText"
+    (keyup)="handleKeyup($event)"
+    [class.wrongTarea]="newTareaText.trim() === '' && newTareaText !== ''">
+</header> -->

@@ -1,0 +1,16 @@
+
+<!-- <div class="fecha">
+<p>
+  En Alicante, {{ fechaSistema |  date: d/M/y h:mm }}
+</p></div> -->
+
+<div class="project-info">
+  <h1 class="name">{{ user.name }}</h1>
+  <h3 class="project-title">{{ user.title }}</h3>
+  <button class="btn btn-success" (click)=ocultarInfo()>Más info</button>
+  <div class="rest" *ngIf="!ocultarData">
+    <h5 class="academic-background">Formación: {{ user.academic }}</h5>
+    <h5 class="contact-phone">Contacto: {{ user.phone }}</h5>
+    <h5 class="personal-hobbies">Aficiones: {{ user.hobbies }}</h5>
+  </div>
+</div>

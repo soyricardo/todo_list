@@ -1,0 +1,19 @@
+<section class="listado_tareas">
+  <h1>Mi lista de tareas: </h1>
+  <div class="tarea {{ tarea.completada ? 'completada' : '' }}" 
+  *ngFor="let tarea of arrData"  @flyInOut>
+     <span *ngIf="!tarea.editing">{{ tarea.text }}</span>
+     <input type="text" *ngIf="tarea.editing"  [(ngModel)]="tarea.editing" (keyup.enter)="editarTarea(tarea)">
+     <i class="fa fa-trash" (click)="destruirTarea(tarea.id)"></i>
+     <!-- <i class="fa fa-check" (click)="tarea.completada"  
+     (change)="emitirCambioCompletada(tarea.id)"></i> -->
+     <!-- Icono Editar Tarea  -->
+     <i class="fa fa-edit" (click)="toggleEditing(tarea)"></i>
+     
+     <!-- Tarea completada -->
+     <input type="checkbox" class="completada" 
+     [checked]="tarea.completada" 
+     (change)="emitirCambioCompletada(tarea.id)" name="done" />
+     
+     
+  </div>

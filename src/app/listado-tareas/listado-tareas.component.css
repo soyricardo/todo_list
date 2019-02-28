@@ -1,0 +1,18 @@
+.completada {
+    opacity: 0.3;
+    text-decoration: line-through;
+    background: grey;
+    border: 2px solid black;
+    padding: 1px;
+   
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+    margin-left: 12px;
+}
+
+fa-edit {
+   margin-left: 22px;
+
+}
